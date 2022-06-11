@@ -1,4 +1,4 @@
-package main //* mengonfigurasikan supaya bisa dikeksekusi di function utama (func main)
+package main //* must define 'main' package, because go app can be runned and builded
 
 import "fmt"
 
