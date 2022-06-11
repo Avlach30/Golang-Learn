@@ -23,4 +23,12 @@ func main() {
 			println(string(letter))
 		}
 	}
+
+	//* TODO 2 with if conditional
+	for _, letter := range title {
+		str := string(letter)
+		if (str == "a" || str == "i" || str == "u" || str == "e" || str == "o") {
+			println(str)
+		}
+	}
 }
