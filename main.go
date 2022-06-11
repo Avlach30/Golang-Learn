@@ -15,4 +15,12 @@ func main() {
 			println(string(letter))
 		}
 	}
+
+	//* TODO 2
+	for _, letter := range title {
+		switch string(letter) {
+		case "a", "i", "u", "e", "o":
+			println(string(letter))
+		}
+	}
 }
