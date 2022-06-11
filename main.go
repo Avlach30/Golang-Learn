@@ -1,9 +1,11 @@
-package main
+package main //* mengonfigurasikan supaya bisa dikeksekusi di function utama (func main)
 
 import "fmt"
 
 func main() {
-	fmt.Println("hello, i'm learning golang"); //* for print data to console/terminal
+	fmt.Println("hello, i'm learning golang") //* for print data to console/terminal
+	sentence := introduction() //* define variables
+	fmt.Println(sentence)
 }
 
 //! Before develop an app with golang, make sure initialize app directory firstly with command 'go mod init 'name-app''
