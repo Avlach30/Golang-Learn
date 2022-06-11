@@ -11,4 +11,10 @@ func main() {
 
 	fmt.Println(studentMales)
 	fmt.Println(studentMalesLen)
+
+	studentFemales := arraystudents.StudentFemales()
+	studentFemaleLength := len(studentFemales)
+
+	fmt.Println(studentFemales)
+	fmt.Println(studentFemaleLength)
 }
