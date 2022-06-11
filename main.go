@@ -8,4 +8,11 @@ func main() {
 	*/
 
 	title := "Golang the best language"
+
+	//* TODO 1
+	for index, letter := range title {
+		if (index % 2 == 0) {
+			println(string(letter))
+		}
+	}
 }
