@@ -13,4 +13,9 @@ func main() {
 		result = "Silahkan tunggu"
 		println(result)
 	}
+
+	//* Define a looping with limit of string length, without define index
+	for _, letter := range result {
+		println(string(letter))
+	}
 }
