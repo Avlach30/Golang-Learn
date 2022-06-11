@@ -17,4 +17,14 @@ func main() {
 
 	fmt.Println(studentFemales)
 	fmt.Println(studentFemaleLength)
+
+	//* Looping an array with loop limit of array length
+	for _, student := range studentMales{
+		println("List student: ", student)
+	}
+
+	for index, student := range studentFemales{
+		orderedList := index + 1
+		println("Absence:", orderedList, ". Name: ", student)
+	}
 }
