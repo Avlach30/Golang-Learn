@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main() { //* Must define function 'name' for executable go app
 	fmt.Println("hello, i'm learning golang") //* for print data to console/terminal
 	sentence := introduction() //* define variables
 	fmt.Println(sentence)
