@@ -13,6 +13,9 @@ func main() {
 	index := findIndexArrayOfStrings(itemTarget, tropicalFruits)
 	println(index)
 	
+	tropicalFruits[index] = "Rambutans"
+	fmt.Println(tropicalFruits)
+
 	tropicalFruits = append(tropicalFruits[:index], tropicalFruits[index+1:]...)
 	/*
 		* Delete a slice element from index
