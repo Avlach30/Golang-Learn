@@ -12,6 +12,13 @@ func main() {
 	itemTarget := "Lychee"
 	index := findIndexArrayOfStrings(itemTarget, tropicalFruits)
 	println(index)
+	
+	tropicalFruits = append(tropicalFruits[:index], tropicalFruits[index+1:]...)
+	/*
+		* Delete a slice element from index
+	  * 	With copying executable slice, but excluce index element which is want to delete it
+	*/
+	fmt.Println(tropicalFruits)
 }
 
 //* Define function whis is return an index of array element
