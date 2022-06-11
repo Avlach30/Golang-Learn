@@ -13,3 +13,17 @@ func StudentMales() []string {
 
 	return studentsMale[:]
 }
+
+func StudentFemales() []string {
+	//* Define an array without define a length when daclarations, but must insert element directly
+	studentFemale := [...]string {
+		"anita",
+		"bella",
+		"chika",
+		"dona",
+		"elin",
+		"firda",
+	}
+
+	return studentFemale[:] //*Returning an array when make a function
+}
