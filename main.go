@@ -32,9 +32,14 @@ func main() {
 	name := "doddy"
 	address := "asia afrika, 7"
 	
-
+	//* Get index with calling findIndex function
 	index := findIndex(name, address, citizen)
 	fmt.Println(citizen[index])
+
+	//* Update existing element from slice of maps
+	citizen[index]["name"] = "donny"
+	citizen[index]["address"] = "merdeka street 17"
+	fmt.Println(citizen)
 }
 
 func findIndex(targetNameValue string, targetAddressValue string, arrSouce []map[string]string) int {
