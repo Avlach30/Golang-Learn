@@ -44,6 +44,12 @@ func main() {
 	//* Get all element from slice of maps until index, but exclude index
 	fmt.Println(citizen[:index])
 
+	/* 
+		* Get all element from slice of maps
+		* Started from element which is their index is called index + 1, until last element
+	*/
+	fmt.Println(citizen[index+1:])
+
 	//* Delete existing element from slice of maps with index
 	citizen = append(citizen[:index], citizen[index+1:]...)
 	fmt.Println(citizen)
