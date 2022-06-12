@@ -18,4 +18,19 @@ func main() {
 
 	delete(mapMovieRatings, "kkn") //* Delete existing key in map
 	fmt.Println(mapMovieRatings)
+
+
+	programmingLangRatings := ratingsmap.ProgrammingLangRatings()
+	fmt.Println(programmingLangRatings)
+
+	programmingLangRatings["java"] = "good for native device" //* Insert a new key-value pair of map
+	fmt.Println(programmingLangRatings)
+
+	length := len(programmingLangRatings) //* Get length of map element's
+	println(length)
+
+	//* Loop over a map with limitation of map length
+	for key, rating := range programmingLangRatings {
+		fmt.Println("Language:", key, ".", "Slogan:", rating)
+	}
 }
