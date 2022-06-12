@@ -27,11 +27,22 @@ func main() {
 	programmingLangRatings["java"] = "good for native device" //* Insert a new key-value pair of map
 	fmt.Println(programmingLangRatings)
 
+	fmt.Println("==========================")
+
 	length := len(programmingLangRatings) //* Get length of map element's
 	println(length)
+
+	fmt.Println("==========================")
 
 	//* Loop over a map with limitation of map length
 	for key, rating := range programmingLangRatings {
 		fmt.Println("Language:", key, ".", "Slogan:", rating)
 	}
+
+	fmt.Println("==========================")
+
+	//* Check the value and check is available or not from called map with key
+	value, isAvailable := programmingLangRatings["java"]
+	fmt.Println(value)
+	fmt.Println(isAvailable)
 }
