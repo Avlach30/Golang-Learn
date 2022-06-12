@@ -23,4 +23,9 @@ func main() {
 	for _, item := range(citizen) {
 		fmt.Println(item)
 	}
+
+	println("=============")
+
+	target := citizen[0]["address"] //* Get only address value from index 0 in citizen slice
+	println(target)
 }
