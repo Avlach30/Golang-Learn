@@ -10,5 +10,6 @@ func main() {
 	mapMovieRatings := ratingsmap.MovieRatings()
 	fmt.Println(mapMovieRatings)
 
-	
+	targetKey := mapMovieRatings["kkn"] //* Get a value in map from key
+	println(targetKey)
 }
