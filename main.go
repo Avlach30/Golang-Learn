@@ -12,4 +12,7 @@ func main() {
 
 	targetKey := mapMovieRatings["kkn"] //* Get a value in map from key
 	println(targetKey)
+
+	mapMovieRatings["kkn"] = 9 //* Update existing value in map from key
+	fmt.Println(mapMovieRatings)
 }
