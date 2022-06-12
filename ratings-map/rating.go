@@ -16,3 +16,16 @@ func MovieRatings() map[string]int {
 
 	return ratings
 }
+
+//* Define a function which is returned map with key of string and vaue of string too
+func ProgrammingLangRatings() map[string]string {
+
+	//* Declarating a map which is insert an element directly
+	ratings := map[string]string{
+		"javascript": "Good for fullstack apps",
+		"go": "super fast",
+		"python": "beginner friendly",
+	}
+
+	return ratings
+}
