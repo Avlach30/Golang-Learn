@@ -19,6 +19,7 @@ func main() {
 	delete(mapMovieRatings, "kkn") //* Delete existing key in map
 	fmt.Println(mapMovieRatings)
 
+	fmt.Println("==========================")
 
 	programmingLangRatings := ratingsmap.ProgrammingLangRatings()
 	fmt.Println(programmingLangRatings)
