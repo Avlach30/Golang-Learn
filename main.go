@@ -50,7 +50,12 @@ func main() {
 	*/
 	fmt.Println(citizen[index+1:])
 
-	//* Delete existing element from slice of maps with index
+	/* 
+		* Delete existing element from slice of maps with index
+		* Logic, get all element from slice until called element which is have same index, but exclude element itself
+		* After that, separate by comma, then get all element from slice which is started from element have called index + 1, until last element
+		* Merge them with three dots operator '...'
+	*/
 	citizen = append(citizen[:index], citizen[index+1:]...)
 	fmt.Println(citizen)
 }
