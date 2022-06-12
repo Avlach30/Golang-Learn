@@ -15,4 +15,7 @@ func main() {
 
 	mapMovieRatings["kkn"] = 9 //* Update existing value in map from key
 	fmt.Println(mapMovieRatings)
+
+	delete(mapMovieRatings, "kkn") //* Delete existing key in map
+	fmt.Println(mapMovieRatings)
 }
