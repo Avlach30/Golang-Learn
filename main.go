@@ -40,6 +40,10 @@ func main() {
 	citizen[index]["name"] = "donny"
 	citizen[index]["address"] = "merdeka street 17"
 	fmt.Println(citizen)
+
+	//* Delete existing element from slice of maps with index
+	citizen = append(citizen[:index], citizen[index+1:]...)
+	fmt.Println(citizen)
 }
 
 func findIndex(targetNameValue string, targetAddressValue string, arrSouce []map[string]string) int {
