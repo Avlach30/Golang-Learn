@@ -29,3 +29,15 @@ func main() {
 	target := citizen[0]["address"] //* Get only address value from index 0 in citizen slice
 	println(target)
 }
+
+func findIndex(targetNameValue string, targetAddressValue string, arrSouce []map[string]string) int {
+	targetIdx := -1
+
+	for idx, item := range(arrSouce) {
+		if (item["name"] == targetNameValue && item["address"] == targetAddressValue) {
+			targetIdx = idx
+		}
+	}
+
+	return targetIdx
+}
