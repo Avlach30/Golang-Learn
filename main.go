@@ -28,6 +28,13 @@ func main() {
 
 	target := citizen[0]["address"] //* Get only address value from index 0 in citizen slice
 	println(target)
+
+	name := "doddy"
+	address := "asia afrika, 7"
+	
+
+	index := findIndex(name, address, citizen)
+	fmt.Println(citizen[index])
 }
 
 func findIndex(targetNameValue string, targetAddressValue string, arrSouce []map[string]string) int {
