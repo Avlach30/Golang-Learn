@@ -41,6 +41,9 @@ func main() {
 	citizen[index]["address"] = "merdeka street 17"
 	fmt.Println(citizen)
 
+	//* Get all element from slice of maps until index, but exclude index
+	fmt.Println(citizen[:index])
+
 	//* Delete existing element from slice of maps with index
 	citizen = append(citizen[:index], citizen[index+1:]...)
 	fmt.Println(citizen)
