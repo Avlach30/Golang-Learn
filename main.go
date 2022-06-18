@@ -24,14 +24,14 @@ func main() {
 	//* Assignment result of todo 2
 	calculateDivide, err := calculation.Calculation(22, 4, "/")
 	if (err != nil) { //* If error not null (available)
-		fmt.Println(err)
+		fmt.Println(err.Error()) //* Print a error variable to console
 	} else {
 		fmt.Println(calculateDivide)
 	}
 
 	calculateUnknown, err := calculation.Calculation(35, 8, "]")
 	if (err != nil) { //* If error not null (available)
-		fmt.Println(err)
+		fmt.Println(err.Error())
 	} else {
 		fmt.Println(calculateUnknown)
 	}
