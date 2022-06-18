@@ -11,6 +11,13 @@ type Citizen struct {
 	IsMarried bool 
 }
 
+//* Define a function which is accept parameter from struct
+func describeCitizen (citizen Citizen) string {
+	return fmt.Sprintf(
+		"Hello!, my name is %s, i live at %s, i'm %t married. You can contact me at %d", 
+		citizen.Name, citizen.Address, citizen.IsMarried, citizen.NumberPhone)
+}
+
 func main() {
 
 	//* Make istance from struct with assign value directly
@@ -21,6 +28,8 @@ func main() {
 		IsMarried: true,
 	}
 	fmt.Println(ahmad)
+	describeAhmad := describeCitizen(ahmad) //* Calling a function with parameter of istance from struct
+	fmt.Println(describeAhmad)
 
 	//* Make istance from struct with assign value undirectly
 	diana := Citizen{}
