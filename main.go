@@ -4,6 +4,8 @@ import "fmt"
 
 func main() {
 	implementPointer(5)
+	println("=======")
+	implementPointerWithVar(6)
 }
 
 func implementPointer(initNumber int) {
@@ -18,6 +20,20 @@ func implementPointer(initNumber int) {
 
 	*secondNum = initNumber * 3 
 	//* Reassign real value from pointer, so affected pointer source (initNumber) value is changed too
+	fmt.Println(*secondNum)
+
+	fmt.Println(initNumber)
+}
+
+//* Implement a pointer with var keyword
+func implementPointerWithVar(initNumber int) {
+	var secondNum *int = &initNumber //* Referencing process
+	var thirdNum = *secondNum //* Dereferencing process
+
+	fmt.Println(secondNum)
+	fmt.Println(thirdNum)
+
+	*secondNum = initNumber * 3 //* Reassign real value from referencing result
 	fmt.Println(*secondNum)
 
 	fmt.Println(initNumber)
