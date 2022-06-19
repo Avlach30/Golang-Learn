@@ -3,39 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	implementPointer(5)
-	println("=======")
-	implementPointerWithVar(6)
+	number := 11
+	fmt.Printf("Value before processing: %d", number)
+	println("")
+	changeValue(&number, 100)
+	//* Call function with referencing technique for get address memory where number value stored
+	println("")
+	fmt.Printf("Value after processing: %d", number)
 }
 
-func implementPointer(initNumber int) {
-	//* Implementing of pointer
-	secondNum := &initNumber 
-	//* Get a memory address where value of initNumber stored, this is called referencing
-	thirdNum := *secondNum 
-	//* Get a real value from pointer variable, this is called dereferencing
-
-	fmt.Println(secondNum)
-	fmt.Println(thirdNum)
-
-	*secondNum = initNumber * 3 
-	//* Reassign real value from pointer, so affected pointer source (initNumber) value is changed too
-	fmt.Println(*secondNum)
-
-	fmt.Println(initNumber)
+//* Define a functions which is changed value globally with implement of pointer
+func changeValue(oldNumber *int, newNumber int) {
+	//* Process for reassign reference value with dereferencing technique (get real value from address memory)
+	*oldNumber = newNumber
+	fmt.Printf("New value: %d", *oldNumber)
 }
-
-//* Implement a pointer with var keyword
-func implementPointerWithVar(initNumber int) {
-	var secondNum *int = &initNumber //* Referencing process
-	var thirdNum = *secondNum //* Dereferencing process
-
-	fmt.Println(secondNum)
-	fmt.Println(thirdNum)
-
-	*secondNum = initNumber * 3 //* Reassign real value from referencing result
-	fmt.Println(*secondNum)
-
-	fmt.Println(initNumber)
-}
-
