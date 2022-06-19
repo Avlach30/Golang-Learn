@@ -18,7 +18,8 @@ type City struct {
 	Citizens []Citizen //* Define data type is array or slice of struct
 }
 
-func describeCitizen (citizen Citizen) string {
+//* Define a method for Citizen struct
+func (citizen Citizen) Describe() string {
 	return fmt.Sprintf(
 		"Hello!, my name is %s, i live at %s, i'm %t married. You can contact me at %d", 
 		citizen.Name, citizen.Address, citizen.IsMarried, citizen.NumberPhone)
@@ -53,8 +54,6 @@ func main() {
 		IsMarried: true,
 	}
 	fmt.Println(ahmad)
-	describeAhmad := describeCitizen(ahmad) //* Calling a function with parameter of istance from struct
-	fmt.Println(describeAhmad)
 
 	println("============")
 
@@ -66,6 +65,7 @@ func main() {
 	diana.IsMarried = false
 
 	fmt.Println(diana)
+	fmt.Println(diana.Describe()) //* Calling a method
 
 	println("============")
 
