@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//!TODO: Change describeCity function to method, refer to City struct
+
 //* Define a struct in go
 //* 	Struct like a class, so developer can make a blueprint of object and can implement a oop too
 type Citizen struct {
@@ -25,11 +27,11 @@ func (citizen Citizen) Describe() string {
 		citizen.Name, citizen.Address, citizen.IsMarried, citizen.NumberPhone)
 }
 
-//* Define a function which is accept parameter from struct and returned string
-func describeCity (city City) string {
+//!TODO Answer
+func (city City) Describe() {
 	citizenTotal := len(city.Citizens)
 
-	describeCity := fmt.Sprintf(
+	fmt.Printf(
 		"Welcome to %s city, this city is led by %s. Total population in this city is %d person",
 		city.Name, city.Major.Name, citizenTotal,
 	)
@@ -38,10 +40,12 @@ func describeCity (city City) string {
 
 	fmt.Println("Citizen list: ")
 	for _, citizen := range city.Citizens {
-		fmt.Println(citizen.Name)
+		fmt.Printf(
+			"Name: %s, Address: %s", 
+			citizen.Name, citizen.Address,
+		)
+		println("")
 	}
-
-	return describeCity
 }
 
 func main() {
@@ -81,6 +85,5 @@ func main() {
 		Major: chandra,
 		Citizens: []Citizen{ahmad, diana, chandra}, //*Append or insert struct to array or slice
 	}
-
-	fmt.Println(describeCity(surabaya))
+	surabaya.Describe() //* Calling a method from struct instance
 }
